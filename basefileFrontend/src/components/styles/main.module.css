@@ -1,0 +1,95 @@
+.menu {
+    background-color: rgb(255, 255, 255);
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    position: absolute;
+    width: 300px;
+  }
+  
+  .top{
+    align-self: center;
+    display: flex;
+  }
+  
+  .mid{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 28%;
+  }
+  
+  .rec{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    background-color: transparent;
+    color: rgb(125, 186, 64); 
+    align-self: center;
+  }
+  
+  .fabio {
+    margin-bottom: 40px;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    align-self: center;
+  }
+  
+  .switch{
+    margin: 10px;
+    border:none;
+    background-color: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    background-color: transparent;
+    color: rgb(8, 94, 68);
+  }
+  
+  .switch:hover {
+    color:rgb(125, 186, 64);
+  }
+  
+  .log {
+    margin-top: 26px;
+    border:none;
+    background-color: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    background-color: rgb(125, 186, 64);
+    color: rgb(255, 255, 255);
+    border-radius: 7px;
+    height:37px;
+    width:175px;
+    align-self: center;
+  }
+  
+  .log:hover{
+    background-color: white;
+    color: rgb(37, 69, 59);
+    box-shadow: -1px 1px 20px 3px rgb(125, 186, 64);
+  }
+  
+  .pages{
+    background-color: indianred;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin-left: 300px;
+  }
+
+  .box{
+    width: 100%;
+    height: 100%;
+    background-color: indianred;
+}
+
+.photo{
+    position: relative;
+    height:100px;
+    width: 300px;
+}

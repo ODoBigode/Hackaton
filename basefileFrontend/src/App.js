@@ -1,15 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import { UserCreation } from './components/SingnUp';
-import { UserLogin } from './components/LogIn';
+import { Render } from './components/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <UserCreation />
-      <UserLogin />
+      <Render />
     </div>
   );
 }
+
+
 
 export default App;
