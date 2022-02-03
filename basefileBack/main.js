@@ -7,6 +7,18 @@ let client
 
 app.use(express.json())
 
+async function insertUserMongo(user) {
+  const collection = await getMongoCollection('Hackaton', 'users')
+  const result = await collection.insertOne(user)
+  return  // result.insertedUser
+}
+
+async function FindUserByEmail(email) {
+  const collection = await getMongoCollection('Hackaton', 'users')
+  return await collection.findOne({email: email})
+  
+}
+
 async function connectToMongo() {
     try {
       if (!client) {
@@ -80,6 +92,27 @@ app.post('/api/signup', async (req, res) => {
         return res.status(200).json({Menssagem: 'User stored'})
 
     }
+})
+
+app.post('/api/login', async (req, res) =>{
+  const { email, password } = req.body;
+  console.log('trying')
+  //if (!validateEmail(email) || !validatePassword(password)) return res.sendStatus(400)
+  console.log('trying to get user')
+  const user = await FindUserByEmail(email)
+  console.log(user)
+
+  if(!user) return res.sendStatus(400)
+
+  const passwordsMatch = user.password == password
+
+  
+
+  if (!user || !passwordsMatch) {
+     return res.sendStatus(400)
+  }
+  // eventualmente returnar um "_id"
+  res.status(200).json({token: user._id})
 })
 
 
