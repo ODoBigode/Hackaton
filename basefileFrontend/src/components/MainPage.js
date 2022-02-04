@@ -16,7 +16,7 @@ export function Render() {
 
             <div className={style.menu}>
                 <div className={style.top}>
-                   { !isLogging ? <button  className={style.log} onClick={() => setIslogging((s) => !s)}>Log in/Sign Up</button> : <button className={style.log} onClick={() => setIslogging((s) => !s)}>Log Out</button>}
+                   { isLogging ? <button  className={style.log} onClick={() => setIslogging((s) => !s)}>Log in/Sign Up</button> : <button className={style.log} onClick={() => setIslogging((s) => !s)}>Log Out</button>}
                 </div>
                 <div className={style.mid}>
                     <p className={style.rec}>RECICLARTE</p>
