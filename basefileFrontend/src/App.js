@@ -3,7 +3,7 @@ import { Render } from './components/MainPage';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Render />
     </div>
   );

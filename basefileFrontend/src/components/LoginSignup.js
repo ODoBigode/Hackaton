@@ -28,6 +28,8 @@ function UserLogin(values, InfoId) {
     const [email, setEmail] = useState('')
     // const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
+    
+    let navigate = useNavigate();
 
     function HandleErr(values) {
         setErr( e => {
@@ -100,12 +102,12 @@ function UserLogin(values, InfoId) {
                     <div >
                         <p >PASSWORD</p>
                         <input type="password"  onChange={(e) => HandleUserInfo({email:email, pass: e.target.value}, 'password')}/>
-                        <p ><a href="ERROR 404, PAG NOT FOUND">ESQUECI-ME DA PASSWORD</a></p>
+                        <p ><a href="ERROR 404, PAG NOT FOUND">I FORGOT MY PASSWORD</a></p>
                         {(err.errMessageMail || err.errMessagePass) ? <p >EMAIL E/OU PASSWORD INVÁLIDA</p> : <p></p>}
                     </div>
     
-                  <button >VAMOS JOGAR!!</button>
-                  <p >NÃO TENS CONTA? <a href="ALGUMA CENA">CRIA UMA!</a></p>
+                  <button onClick={() => navigate('/portfolio')}>CONTINUE TO SITE!!</button>
+                  <p >DON'T HAVE AN ACCOUNT? <a href="ALGUMA CENA">CREATE ONE!</a></p>
                     
                     
                 </form>
@@ -224,11 +226,11 @@ function UserCreation({changeState}) {
     
 }
 
-export function UserEnter(){
+export function UserEnter({isLogging}){
     const [acount, setAcount] = useState(false)
     return (
         <div>
-            {!acount ? <UserCreation changeState={() => setAcount(!acount)} /> : <UserLogin />}
+            {!acount ? <UserCreation changeState={() => setAcount(!acount)} /> : <UserLogin isLogging={isLogging}/>}
         </div>
     )
 }

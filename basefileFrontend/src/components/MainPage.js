@@ -16,7 +16,7 @@ export function Render() {
 
             <div className={style.menu}>
                 <div className={style.top}>
-                   { !isLogging ? <button  className={style.log} onClick={() => setIslogging(!isLogging)}>Log in/Sign Up</button> : <button className={style.log} onClick={() => setIslogging(!isLogging)}>Log Out</button>}
+                   { !isLogging ? <button  className={style.log} onClick={() => setIslogging((s) => !s)}>Log in/Sign Up</button> : <button className={style.log} onClick={() => setIslogging((s) => !s)}>Log Out</button>}
                 </div>
                 <div className={style.mid}>
                     <p className={style.rec}>RECICLARTE</p>
@@ -26,13 +26,23 @@ export function Render() {
                     <button className={style.switch} onClick={() => navigate('/about')}>About me</button>
                 </div>
             </div>
-            <div className={style.pages}>
-                <Routes>
-                    {isLogging ? <Route path='/user' element={<UserEnter />} /> : <Route path='/portfolio' element={<RenderPortfolio />} />}
-                    {isLogging ? <Route path='/user' element={<UserEnter />} /> : <Route path='/highlights' element={<RenderHighlights />} />}
-                    {isLogging ? <Route path='/user' element={<UserEnter />} /> : <Route path='/about' element={<RenderAbout />} />} 
-                </Routes>
+            <div className={style.box}>
+                { isLogging ? <UserEnter /> : <Render2 />} 
             </div>
         </div>       
     )
+}
+
+export function Render2(isLogging) {
+
+return (
+    <div>
+        <Routes>
+            <Route path='/portfolio' element={<RenderPortfolio />} />
+            <Route path='/highlights' element={<RenderHighlights />} />
+            <Route path='/about' element={<RenderAbout />} />
+        </Routes>        
+    </div>
+)
+                
 }
