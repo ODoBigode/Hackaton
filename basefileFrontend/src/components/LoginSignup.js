@@ -106,7 +106,6 @@ function UserLogin(values, InfoId) {
                         {(err.errMessageMail || err.errMessagePass) ? <p >EMAIL E/OU PASSWORD INVÁLIDA</p> : <p></p>}
                     </div>
     
-                  <button onClick={() => navigate('/portfolio')}>CONTINUE TO SITE!!</button>
                   <p >DON'T HAVE AN ACCOUNT? <a href="ALGUMA CENA">CREATE ONE!</a></p>
                     
                     
@@ -229,7 +228,7 @@ function UserCreation({changeState}) {
 export function UserEnter({isLogging}){
     const [acount, setAcount] = useState(false)
     return (
-        <div>
+        <div className={style.box}>
             {!acount ? <UserCreation changeState={() => setAcount(!acount)} /> : <UserLogin isLogging={isLogging}/>}
         </div>
     )

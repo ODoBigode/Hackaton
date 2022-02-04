@@ -1,104 +1,104 @@
 .menu {
-    background-color: rgb(255, 255, 255);
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    
-    position: absolute;
-    width: 300px;
-  }
+  background-color: rgb(255, 255, 255);
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   
-  .top{
-    align-self: center;
-    display: flex;
-  }
-  
-  .mid{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 28%;
-  }
-  
-  .rec{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-large;
-    background-color: transparent;
-    color: rgb(125, 186, 64); 
-    align-self: center;
-  }
-  
-  .fabio {
-    margin-bottom: 40px;
-    border-radius: 100%;
-    width: 130px;
-    height: 130px;
-    align-self: center;
-  }
-  
-  .switch{
-    margin: 10px;
-    border:none;
-    background-color: none;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-large;
-    background-color: transparent;
-    color: rgb(8, 94, 68);
-  }
-  
-  .switch:hover {
-    color:rgb(125, 186, 64);
-  }
-  
-  .log {
-    margin-top: 26px;
-    border:none;
-    background-color: none;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 17px;
-    background-color: rgb(125, 186, 64);
-    color: rgb(255, 255, 255);
-    border-radius: 7px;
-    height:37px;
-    width:175px;
-    align-self: center;
-  }
-  
-  .log:hover{
-    background-color: white;
-    color: rgb(37, 69, 59);
-    box-shadow: -1px 1px 20px 3px rgb(125, 186, 64);
-  }
-  
-  .pages{
-    background-color: indianred;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    margin-left: 300px;
-  }
+  position: absolute;
+  width: 300px;
+}
 
-  .box{
-    height: 100vh;
-    margin-bottom: 0;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    justify-content: center;
-    margin-left: 300px;
+.top{
+  align-self: center;
+  display: flex;
+}
+
+.mid{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 28%;
+}
+
+.logo{
+  background-color: transparent;
+  max-width: 260px;
+  margin-bottom: 20px;
+  display: flex;
+  align-self: center;
+}
+
+.rec{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: x-large;
+  background-color: transparent;
+  color: rgb(125, 186, 64); 
+  align-self: center;
+}
+
+.fabio {
+  margin-bottom: 40px;
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  align-self: center;
+}
+
+.switch{
+  margin: 10px;
+  border:none;
+  background-color: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: x-large;
+  background-color: transparent;
+  color: rgb(8, 94, 68);
+}
+
+.switch:hover {
+  color:rgb(125, 186, 64);
+}
+
+.log {
+  margin-top: 26px;
+  border:none;
+  background-color: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  background-color: rgb(125, 186, 64);
+  color: rgb(255, 255, 255);
+  border-radius: 7px;
+  height:37px;
+  width:175px;
+  align-self: center;
+}
+
+.log:hover{
+  background-color: white;
+  color: rgb(37, 69, 59);
+  box-shadow: -1px 1px 20px 3px rgb(125, 186, 64);
+}
+
+.pages{
+  background-color: indianred;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-left: 300px;
+}
+
+.box{
+  margin-left: 300px;
+  height: 100vh;
 }
 
 .photo{
-    position: relative;
-    background-color: blue;
-    width: 20px;
-    height: 20px;
+  max-height: 200px;
+  margin: 15px;
 }
-
 .about{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
